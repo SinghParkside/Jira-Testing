@@ -2,3 +2,34 @@ Jira Testing
 
 
 Changed the lines
+#include "CarbonFootprint.h"
+#include <string>
+#include <vector>
+
+#ifndef BUILDING_H
+#define BUILDING_H
+
+using namespace std;
+
+class Building:public CarbonFootprint {
+
+// class declaration
+public :
+    // single arg constructor declaration
+    Building(int sqft);
+    // multi-arg constructor declaration
+    Building(int sqft, string material);
+    // getCarbonFootprint declaration
+    void getCarbonFootprint();
+    // getSqft declaration
+    int getSqft();
+
+// private object attributes
+private :
+    // square feet of building
+    int sqft;
+    // material building is made from
+    string material;
+};
+
+#endif
